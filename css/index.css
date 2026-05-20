@@ -60,16 +60,18 @@ main {
 }
 
 .category-container__category {
+    font-family: 'Montserrat', sans-serif;
     color: #333; 
     font-size: 14px; 
     font-weight: 600;
     padding: 5px 7.5px;
     border-radius: 24px;
     border: 1px solid #C1C5CD;
+    background: #fff;
     display: flex;
     align-items: center; 
 }
-.category-icon,
+.category__icon,
 .category-container__category img {
     width: 18px ;
     height: 18px ;
@@ -191,7 +193,7 @@ main {
     width: fit-content;
 }
 .card__category img,
-.card__category .category-icon {
+.card__category .category__icon {
     width: 18px !important;
     height: 18px !important; 
     display: block;
@@ -574,4 +576,5 @@ main {
         height: 206px;
     }
 }
+
 

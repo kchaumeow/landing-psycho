@@ -16,7 +16,7 @@ header {
     display: flex; 
     gap: 11.39vw;
 }
-.header__logo-container > img { 
+.header__logo-container img { 
     margin-top: 4px;
 }
 .header__navbar { 
@@ -59,6 +59,11 @@ header {
     background-color: #daecec;
     cursor: pointer;
 }
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #16C8BB;
+    outline-offset: 3px;
+}
 .header__dropdown  {
     display: none;
     position: absolute;
@@ -73,7 +78,7 @@ header {
     text-decoration: none;
     display: block;
 }
-.dropdown-item {
+.header__dropdown-icon {
     width: 14px;  
 }
 .header__dropdown  a:hover {background-color: #f1f1f1}
@@ -85,6 +90,10 @@ header {
 }
 .header__adaptive-link {
     display: none;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
 }  
 @media screen and (max-width: 1160px)  {
     header {
@@ -195,3 +204,4 @@ header {
 
 
  
+

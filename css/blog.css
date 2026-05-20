@@ -136,9 +136,6 @@ html  {
 .blog-container__nav-content > ul > li:nth-of-type(1)  >a {
     margin-left: 22px;
 }
-.adaptive-img {
-    display: none;
-}
 .blog-container__first-container {
     display: flex;
     flex-flow: column nowrap;
@@ -159,7 +156,7 @@ html  {
     flex-flow: column nowrap;
     row-gap: 24px;
 } 
-.blog-container__qoute-container {
+.blog-container__quote-container {
     background-color: #F3F7FE;
     position: relative;
     z-index: 0;
@@ -170,7 +167,7 @@ html  {
     row-gap: 8px;
     margin-top: 20px;
 }
-.blog-container__qoute-container > blockquote { 
+.blog-container__quote-container > blockquote { 
     position: relative;
     z-index: 2;
     font-weight: 400;
@@ -179,7 +176,7 @@ html  {
     line-height: 24px; 
     margin: 34px 24px 0 24px;  
 }
-.blog-container__qoute-container > cite {
+.blog-container__quote-container > cite {
     position: relative;
     z-index: 2;
     font-size: 16px;
@@ -188,7 +185,7 @@ html  {
     margin-left: 24px;
     margin-bottom: 24px;
 }
-.blog-container__qoute-container > .quote-icon {
+.blog-container__quote-container > .blog-container__quote-icon {
     position: absolute;
     top: 16px;
     left: 16px;
@@ -426,7 +423,7 @@ main >  div:nth-of-type(1) {
     top: 16px;
     left: 16px;
 }
-.aside-content__card-1 {
+.aside-content__card--psychologist {
     position: relative;
 }
 .aside-content__category {
@@ -445,9 +442,10 @@ main >  div:nth-of-type(1) {
     font-size: 12px;
 } 
 .aside-content__category > .aside-content__category-icon {
-    width: 13px !important; 
+    width: 16px !important; 
     height: 16px !important;  
     margin-top: 0 !important;
+    object-fit: contain;
 }
 .aside-content__card {
     display: flex;
@@ -458,6 +456,13 @@ main >  div:nth-of-type(1) {
     row-gap: 24px;
     padding: 24px 0 ;
     border-radius: 16px;    
+}
+.aside-content__card > img {
+    display: block;
+    width: min(82%, 282px);
+    height: auto;
+    max-height: 206px;
+    object-fit: contain;
 }
 .aside-content__card > div {
     width: 78%;
@@ -490,7 +495,7 @@ main >  div:nth-of-type(1) {
     border-radius: 4px;
     margin-top: 1px;
 }
-.aside-content__card-1  {
+.aside-content__card--psychologist  {
     border: 1px solid #DEDEDE;  
     display: flex;
     flex-flow: column nowrap;
@@ -498,7 +503,7 @@ main >  div:nth-of-type(1) {
     border-radius: 16px;
     width: 100%; 
 } 
-.aside-content__card-1 > img {
+.aside-content__card--psychologist > img {
     width: 120px;
     height: 120px;
     border-radius: 50%; 
@@ -588,7 +593,7 @@ main >  div:nth-of-type(1) {
     margin-top: 16px;
     margin-bottom: 36px;
 }
-.aside-content__card-3 {
+.aside-content__card--price {
     display: flex;
     flex-flow: column nowrap;
     gap: 16px;
@@ -596,21 +601,26 @@ main >  div:nth-of-type(1) {
     padding: 32px;
     position: relative;
     border-radius: 24px; 
-    margin-top: 14px;    
+    margin-top: 14px;
+    overflow: hidden;
+    background-image: url("../assets/gift.png");
+    background-repeat: no-repeat;
+    background-position: right -16px bottom 0;
+    background-size: 292px auto;
 }
-.aside-content__card-3 >  h3 {
+.aside-content__card--price >  h3 {
     color: #2963A3;
     line-height: 26px;
     font-size: 18px;
     font-weight: 700;
     margin: 0; 
 }
-.aside-content__card-3 > h3 > span {
+.aside-content__card--price > h3 > span {
     font-size: 24px;
     line-height: 32px;
     font-weight: 700;
 }
-.aside-content__card-3 > p {
+.aside-content__card--price > p {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -618,13 +628,13 @@ main >  div:nth-of-type(1) {
     width: 88%;
     font-family: "Open Sans", sans-serif;
 }
-.aside-content__card-3 > .aside-content__card-price {
+.aside-content__card--price > .aside-content__card-price {
     font-weight: 700;
     font-size: 24px;
     line-height: 32px;
     color: #333333;
 }
-.aside-content__card-3 > button {
+.aside-content__card--price > button {
     border: none;
     color: #FFF;
     font-family: 'Montserrat';
@@ -635,20 +645,6 @@ main >  div:nth-of-type(1) {
     font-weight: 700;
     border-radius: 4px;
     width: fit-content;
-}
-.aside-content__card-3 > img:nth-of-type(2) {
-    width: min-content;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.aside-content__card-3 > img:nth-of-type(1) {
-    width: min-content; 
-    position: absolute;
-    bottom: 0;
-    right: 0px;
-    z-index: 2;
-    border-bottom-right-radius: 24px;
 }
 main > div:nth-of-type(2) > div {
     width: 28%;   
@@ -722,11 +718,11 @@ footer {
     cursor: pointer;
     background-color: #31a59b;
 }
-.aside-content__card-1 button:hover {
+.aside-content__card--psychologist button:hover {
     cursor: pointer;
     background-color: #31a59b;
 }
-.aside-content__card-3 > button:hover {
+.aside-content__card--price > button:hover {
     cursor: pointer;
     background-color: #31a59b ;
 }
@@ -769,8 +765,9 @@ main > div:nth-of-type(2) button:hover {
         width: 100%;
     } 
     .aside-content__card > img {
-        width: 181px;
-        height: 144px;
+        width: min(76%, 181px);
+        height: auto;
+        max-height: 144px;
     }
     .aside-content__card >  div {
         width: 80%;
@@ -778,8 +775,8 @@ main > div:nth-of-type(2) button:hover {
     .aside-content__card > button {
         padding: 12px 41.5px;
     }
-    .aside-content__card-2::after {
-        background-position: center bottom;
+    .aside-content__card--gift::after {
+        background-position: center calc(100% + 8px);
         background-size: 100% auto;
     }
     .blog-container__img > img {
@@ -795,7 +792,7 @@ main > div:nth-of-type(2) button:hover {
     .blog-container__title {
         width: 95%;
     }
-    .blog-container__qoute-container {
+    .blog-container__quote-container {
         margin-top: 04px;
     }
     .blog-container__image-container > img {
@@ -828,18 +825,16 @@ main > div:nth-of-type(2) button:hover {
         padding: 12px  37.5px;
         margin-bottom: 17px;
     }
-    .aside-content__card-2 { 
+    .aside-content__card--gift { 
         width: 100%;
         height: 280px; 
     }
-    .aside-content__card-3 {
+    .aside-content__card--price {
         padding: 24px;
     }
-    .aside-content__card-3 > img:nth-of-type(1) {
-        width: 35% ;
-    }
-    .aside-content__card-3 > img:nth-of-type(2) {
-        width: 41%;
+    .aside-content__card--price {
+        background-position: right -20px bottom 0;
+        background-size: 308px auto;
     }
     .blog-container__nav-content > ul > li:nth-of-type(2), .blog-container__nav-content > ul > li:nth-of-type(3) {
         display: none;
@@ -870,8 +865,9 @@ main > div:nth-of-type(2) button:hover {
         padding-top: 22.55px;  
     }
     .aside-content__card > img {
-        width: 282px;
-        height: 206px;
+        width: min(82%, 282px);
+        height: auto;
+        max-height: 206px;
     }
     .aside-content__card > div {
         width: 85%; 
@@ -884,65 +880,52 @@ main > div:nth-of-type(2) button:hover {
         padding: 12px 0;
         width: 87.5%;
     }
-    .aside-content__card-1 {
+    .aside-content__card--psychologist {
         max-width: 356px;   
     }
-    .aside-content__card-1 > .aside-content__card-heading {
+    .aside-content__card--psychologist > .aside-content__card-heading {
         width: 71%;
     }
-    .aside-content__card-1 > .aside-content__card-footer {
+    .aside-content__card--psychologist > .aside-content__card-footer {
         width: 71%;
     }
-    .aside-content__card-1 > .aside-content__card-footer > ul > li:nth-of-type(3) {
+    .aside-content__card--psychologist > .aside-content__card-footer > ul > li:nth-of-type(3) {
         margin-top: 0
     }
     .aside-content__card-footer {
         width: 71%;
     }
-    .aside-content__card-1 > button {
+    .aside-content__card--psychologist > button {
         margin-bottom: 32px;
     }
-    .aside-content__card-2 {
+    .aside-content__card--gift {
         max-width: 356px;
         height: 292px; 
     }
-    .aside-content__card-3 {
+    .aside-content__card--price {
         margin-top: 0; 
         max-width: 334.53px;
         padding-left: 21.47px;
         padding-top: 24px;
         padding-bottom: 4px;
         padding-right: 0; 
-        background-image: url("../assets/gift.svg");
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        background-size: 140px auto;
     }
-    .aside-content__card-3 > p {
+    .aside-content__card--price {
+        background-position: right -20px bottom 0;
+        background-size: 302px auto;
+    }
+    .aside-content__card--price > p {
         width: 71%;
     }
-    .aside-content__card-3 > h3 {
+    .aside-content__card--price > h3 {
         width: fit-content;
     }
     .aside-content__card-price {
         width: fit-content;
     }
-    .aside-content__card-3 > img {
-        display: none;
-    }
-    .adaptive-img {
-        display: inherit;
-        position: absolute;
-        bottom: 0;
-        right: 6%;  
-    }  
-    .adaptive-img > img {
-        border-radius: 0 !important;
-    }
-
-    .aside-content__card-2::after {
+    .aside-content__card--gift::after {
         background-size: 100% auto;
-        background-position: center bottom;
+        background-position: center calc(100% + 8px);
     }
 }
 @media screen and (max-width:769px) {
@@ -1025,7 +1008,7 @@ main > div:nth-of-type(2) button:hover {
     .blog-container__first-container {
         row-gap: 16px;
     }
-    .blog-container__qoute-container {
+    .blog-container__quote-container {
         margin-top: 8px;
     }
     .blog-container__image-container > img {
@@ -1078,7 +1061,7 @@ main > div:nth-of-type(2) button:hover {
         gap: 24px;
         width: 90.34%;
     }
-    .aside-content__card, .aside-content__card-1, .aside-content__card-2, .aside-content__card-3 {
+    .aside-content__card, .aside-content__card--psychologist, .aside-content__card--gift, .aside-content__card--price {
         width: 100% !important;
         max-width: none;
     }
@@ -1089,10 +1072,10 @@ main > div:nth-of-type(2) button:hover {
     .aside-content__card > button {
         width: 84%;
     }
-    .aside-content__card-3 {
+    .aside-content__card--price {
         padding-bottom: 24px;
     } 
-    .aside-content__card-2 {
+    .aside-content__card--gift {
         background-size: 100%;
         border-radius: 16px;
     }
@@ -1124,19 +1107,19 @@ main > div:nth-of-type(2) button:hover {
     .blog-container__text {
         gap: 16px;
     }
-    .blog-container__qoute-container {
+    .blog-container__quote-container {
         margin-top: 32px;  
     }
-    .blog-container__qoute-container > .quote-icon {
+    .blog-container__quote-container > .blog-container__quote-icon {
         width: 8%;
         height: 36px;
         top: 16px;
         left: 16px;
     }
-    .blog-container__qoute-container > blockquote {
+    .blog-container__quote-container > blockquote {
         margin: 26px 16px 0 16px;
     }
-    .blog-container__qoute-container > cite {
+    .blog-container__quote-container > cite {
         margin: 0 0 16px 16px;
     }
     .blog-container__second-container {
@@ -1177,7 +1160,7 @@ main > div:nth-of-type(2) button:hover {
     main > div:nth-child(1) {
         gap: 16px;
     } 
-    .aside-content__card-1 > .aside-content__card-footer {
+    .aside-content__card--psychologist > .aside-content__card-footer {
         width: 90%;
     }
     .aside-content__card-footer > button {
@@ -1189,37 +1172,21 @@ main > div:nth-of-type(2) button:hover {
     .aside-content__card > div > h3 {
         width: 80%;
     }
-    .aside-content__card-2 {
+    .aside-content__card--gift {
         height: 90vw;
     }
-    .aside-content__card-3 {
+    .aside-content__card--price {
         padding: 16px;  
     }
-    .aside-content__card-3 > p {
+    .aside-content__card--price {
+        background-position: right -16px bottom 0;
+        background-size: 282px auto;
+    }
+    .aside-content__card--price > p {
         width: 97%;
-    }
-    .aside-content__card-3 > img:nth-of-type(2) {
-        right: 42px; 
-        width: 150px !important; 
-    }
-    .aside-content__card-3 > .adaptive-img {
-        right: 0;
-    }
-    .adaptive-img > img {
-        width: 105px;
     }
     .blog-container__author-and-date > div:nth-of-type(4) {
         gap: 4px;
-    }
-
-    .aside-content__card-3 > img:nth-of-type(1) {
-        width: 45% !important;
-        height: auto;
-        max-width: none;
-    }
-
-    .aside-content__card-3 > img:nth-of-type(2) {
-        width: 150px !important;
     }
 }
 
@@ -1271,7 +1238,7 @@ main > div:nth-of-type(2) button:hover {
 }
 
 /* The gift certificate card is built with HTML/CSS; only the present artwork is SVG. */
-.aside-content__card-2 {
+.aside-content__card--gift {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1286,16 +1253,16 @@ main > div:nth-of-type(2) button:hover {
     cursor: default;
 }
 
-.aside-content__card-2::after {
+.aside-content__card--gift::after {
     content: "";
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    background-image: url("../assets/gifts.svg");
+    background-image: url("../assets/gifts.png");
     background-repeat: no-repeat;
-    background-position: center calc(100% + 24px);
+    background-position: center calc(100% + 8px);
     background-size: 100% 100%;
     pointer-events: none;
     z-index: 0;
@@ -1351,25 +1318,25 @@ main > div:nth-of-type(2) button:hover {
 }
 
 @media screen and (max-width: 965px) {
-    .aside-content__card-2 {
+    .aside-content__card--gift {
         max-width: none;
         min-height: 280px;
         height: auto;
         background-color: #2963A3;
     }
 
-    .aside-content__card-2::after {
+    .aside-content__card--gift::after {
         background-size: contain;
     }
 }
 
 @media screen and (max-width: 455px) {
-    .aside-content__card-2 {
+    .aside-content__card--gift {
         height: auto;
         min-height: 292px;
     }
 
-    .aside-content__card-2::after {
+    .aside-content__card--gift::after {
         background-size: contain;
     }
 
@@ -1476,14 +1443,14 @@ main > div:nth-of-type(2) button:hover {
     }
 
     .aside-content__card,
-    .aside-content__card-1 {
+    .aside-content__card--psychologist {
         width: 100%;
         max-width: none;
         box-sizing: border-box;
         height: 100%;
     }
 
-    .aside-content__card-2 {
+    .aside-content__card--gift {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;
@@ -1495,26 +1462,20 @@ main > div:nth-of-type(2) button:hover {
         height: 100%;
     }
 
-    .aside-content__card-2::after {
+    .aside-content__card--gift::after {
         background-size: 100% auto;
     }
 
-    .aside-content__card-3 {
+    .aside-content__card--price {
         grid-column: auto;
         justify-self: stretch;
         width: 100%;
         max-width: 356px;
         box-sizing: border-box;
-        height: 100%;
+        height: auto;
         margin-top: 0;
-    }
-
-    .aside-content__card-3 > img:nth-of-type(1) {
-        width: 48%;
-    }
-
-    .aside-content__card-3 > img:nth-of-type(2) {
-        width: 56%;
+        background-position: right -20px bottom 0;
+        background-size: 302px auto;
     }
 
     .aside-content article {
@@ -1523,4 +1484,8 @@ main > div:nth-of-type(2) button:hover {
 }
 
  
+
+
+
+
 
