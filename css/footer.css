@@ -1,4 +1,4 @@
-footer {
+﻿footer {
     background: #2963A3; 
     top: 180px;
     position: relative;
@@ -88,8 +88,9 @@ footer {
     align-items: center;
     height: 100%;
 }
-.footer-container__btn > img {
-    height: 45px;
+.footer-container__btn > svg {
+    width: 24px;
+    height: 24px;
 }
 .footer-container__btn:hover {
     background-color: #13ada3;
@@ -108,20 +109,20 @@ footer {
     width: 486px;
    
 }
-.footer-container__social-container > div:nth-of-type(1) > .footer-container__socicon {
+.footer-container__social-container > div:nth-of-type(1) .footer-container__socicon {
     width: 20px;
     height: 11.82px;
 }
-.footer-container__social-container > div:nth-of-type(2) > .footer-container__socicon {
+.footer-container__social-container > div:nth-of-type(2) .footer-container__socicon {
     width: 16px;
     height: 14.12px;
 }
 
-.footer-container__social-container > div:nth-of-type(3) > .footer-container__socicon {
+.footer-container__social-container > div:nth-of-type(3) .footer-container__socicon {
     width: 17px;
     height: 13.81px;
 }
-.footer-container__social-container > div:nth-of-type(4) > .footer-container__socicon {
+.footer-container__social-container > div:nth-of-type(4) .footer-container__socicon {
     width: 32px;
     height: 32px;
 }
@@ -199,8 +200,9 @@ footer {
         row-gap: 26px; 
         padding-left: 8px;
     }
-    .footer-container__btn > img {
-        height: 45px;
+    .footer-container__btn > svg {
+        width: 24px;
+        height: 24px;
     }
     .footer-container__social-container > div > a {
         width: 100%;
@@ -245,8 +247,9 @@ footer {
         width: 18px;
         height: 18px;
     }
-    .footer-container__btn > img {
-        height: 45px;
+    .footer-container__btn > svg {
+        width: 24px;
+        height: 24px;
     }
     .footer-container__social-container > div > a {
         width: 100%;
@@ -294,8 +297,9 @@ footer {
     .footer-container__social-container {
         margin-top: 15px;
     }
-    .footer-container__btn > img {
-        height: 45px;
+    .footer-container__btn > svg {
+        width: 24px;
+        height: 24px;
     }
     .footer-container__social-container > div > a {  
         width: 100%;
@@ -324,8 +328,9 @@ footer {
     .footer-container__input-group {
         width: 100%;
     }
-    .footer-container__btn > img {
-        height: 45px;
+    .footer-container__btn > svg {
+        width: 24px;
+        height: 24px;
     }
     .footer-container__social-container > div > a  {  
         width: 100%;
