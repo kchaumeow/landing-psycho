@@ -1262,21 +1262,6 @@ main > div:nth-of-type(2) button:hover {
     cursor: default;
 }
 
-.aside-content__card-2::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: 0.9;
-    background:
-        radial-gradient(circle at 14% 10%, #35B3A9 0 1.5px, transparent 2px),
-        radial-gradient(circle at 28% 8%, #FFD85A 0 1.5px, transparent 2px),
-        radial-gradient(circle at 70% 16%, #35B3A9 0 1.5px, transparent 2px),
-        radial-gradient(circle at 84% 12%, #FFD85A 0 1.5px, transparent 2px),
-        linear-gradient(78deg, transparent 12%, #35B3A9 12% 13%, transparent 13%),
-        linear-gradient(108deg, transparent 80%, #FFD85A 80% 81%, transparent 81%);
-    pointer-events: none;
-}
-
 .aside-content__gift-text {
     position: relative;
     z-index: 1;
